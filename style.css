@@ -1,0 +1,261 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    line-height: 1.6;
+    background-color: #121212; 
+    color: #e0e0e0; 
+}
+
+/* Navigation Bar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+    transition: all 0.4s ease;
+    z-index: 1000;
+    background-color: transparent;
+}
+
+.navbar.scrolled {
+    background-color: #0a0a0a; /* Darker header on scroll */
+    padding: 15px 8%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 800;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #00bcd4;
+}
+
+/*    Hero Section (with Image Background)*/
+.hero {
+    min-height: 100vh;
+   
+    background: linear-gradient(rgba(10, 10, 10, 0.7), rgba(10, 10, 10, 0.8)), 
+                url('assests/images/hero-bg.jpeg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    color: #ffffff;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 30px;
+    color: #cccccc;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #00bcd4;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #008ba3;
+    transform: translateY(-3px);
+}
+
+/*
+   General Sections & Layout */
+section {
+    padding: 80px 8%;
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* About Section  */
+#about {
+    background-color: #121212;
+}
+
+.about-box {
+    background-color: #1e1e1e; 
+    padding: 50px;
+    border-radius: 12px;
+    border: 1px solid #333;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-box p {
+    font-size: 1.2rem;
+    color: #cccccc;
+    line-height: 1.8;
+}
+
+/*Services Section*/
+#services {
+    background-color: #0a0a0a; 
+}
+
+.service-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.service-card {
+    background-color: #1e1e1e;
+    padding: 40px 20px;
+    border-radius: 10px;
+    border: 1px solid #333;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+    border-color: #00bcd4;
+}
+
+.service-card img {
+    width: 64px;
+    margin-bottom: 20px;
+    
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+/*Portfolio Section */
+#portfolio {
+    background-color: #121212;
+}
+
+.portfolio-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap; 
+}
+
+.portfolio-card {
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    overflow: hidden; 
+    border: 1px solid #333;
+    width: 320px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.portfolio-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; 
+    transition: transform 0.4s ease;
+}
+
+.portfolio-info {
+    padding: 20px;
+    text-align: left;
+}
+
+.portfolio-info h3 {
+    font-size: 1.3rem;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.portfolio-info p {
+    font-size: 0.95rem;
+    color: #00bcd4; 
+    font-weight: 500;
+}
+
+/* Portfolio Hover Animations */
+.portfolio-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 188, 212, 0.2);
+    border-color: #00bcd4; 
+}
+
+
+.portfolio-card:hover img {
+    transform: scale(1.06); /* Image zoom */
+}
+
+
+/* Contact & Footer section*/
+#contact {
+    text-align: center;
+    background-color: #121212;
+}
+
+#contact p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #cccccc;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background-color: #0a0a0a;
+    color: #777;
+    border-top: 1px solid #222;
+}
